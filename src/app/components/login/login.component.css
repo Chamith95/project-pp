@@ -1,19 +1,33 @@
 .mat-card {
-  max-width: 500px;
+  max-width: 40%;
   height: 400px;
   width: 100%;
-  margin-left: 300px;
-  margin-right: 300px;
+  margin-left: 30%;
+  margin-right: 30%;
   margin-top: 50px;
   text-align: center;
+  background: #e6eeff;
 }
+
+.mat-card-title {
+  color: #24099e;
+}
+
 .mat-card-content {
-  margin: 10px;
+  margin: 30px;
   align-content: center;
 }
 
-mat-grid-tile {
-  background: lightblue;
+.profile-picture {
+  width: 250px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.mat-grid-tile {
+  margin: 20px;
+  background: rgb(57, 191, 236);
 }
 
 .button {

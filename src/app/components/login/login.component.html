@@ -1,8 +1,20 @@
-<div *ngIf="fa.user | async as user; else showLogin">
+<div *ngIf="(fa.user | async) as user; else showLogin">
   <h1>Hello {{ user.displayName }}!</h1>
   <button (click)="logout()">Logout</button>
 </div>
 <ng-template #showLogin>
-  <p>Please login.</p>
-  <button (click)="login()">Login with Facebook</button>
+  <mat-card class="mat-card">
+    <mat-card-title>Please Login</mat-card-title>
+    <mat-card-content>
+      <div class="profile-picture">
+        <img src="../../assets/images/pp.png" />
+      </div>
+      <div class="mat-card-content">
+        <button mat-raised-button color="primary" class="button" (click)="login()">
+          <img src="../../assets/images/fb_logo.webp" id="facebook-icon" />Login
+          with Facebook
+        </button>
+      </div>
+    </mat-card-content>
+  </mat-card>
 </ng-template>

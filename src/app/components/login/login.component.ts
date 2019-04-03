@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit {
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
   myControl = new FormControl();
+  checked=false;
   // Options for school
   options: string[] = ['Ananda College Colombo', 'Nalanda College Colombo', 'Kingswood College Kandy'];
   filteredOptions: Observable<string[]>;

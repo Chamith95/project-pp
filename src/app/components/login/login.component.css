@@ -1,4 +1,4 @@
-.mat-card {
+.mat-card-1 {
   max-width: 40%;
   height: 400px;
   width: 100%;
@@ -52,10 +52,14 @@ h2{
   margin-bottom: 20px;
 }
 
-.school_input{
+mat-form-field{
   width:300px;
 }
 
 .step3_buttons{
   margin-top:50px;
+}
+
+.main_container{
+  width:100%
 }

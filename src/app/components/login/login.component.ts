@@ -8,8 +8,8 @@ import { auth } from 'firebase/app';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
-  constructor(public fa: AngularFireAuth) { }
+  user;
+  constructor(public fa: AngularFireAuth) {}
 
   login() {
     this.fa.auth.signInWithPopup(new auth.FacebookAuthProvider());
@@ -19,7 +19,5 @@ export class LoginComponent implements OnInit {
     this.fa.auth.signOut();
   }
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

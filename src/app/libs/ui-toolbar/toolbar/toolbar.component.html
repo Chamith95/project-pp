@@ -1,0 +1,20 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Afterschool</span>
+    <span class="spacer"></span>
+    <ng-container
+      *ngIf="authService.user$ | async as user; else showLoginButton"
+    >
+      <button mat-icon-button [matMenuTriggerFor]="profileMenu">
+        <mat-icon>person</mat-icon>
+      </button>
+      <mat-menu #profileMenu="matMenu">
+        <button mat-menu-item>{{ user.displayName }}</button>
+        <button mat-menu-item (click)="handleLogout()">Logout</button>
+      </mat-menu>
+    </ng-container>
+    <ng-template #showLoginButton>
+      <a mat-stroked-button (click)="handleLogin()">Login</a>
+    </ng-template>
+  </mat-toolbar-row>
+</mat-toolbar>

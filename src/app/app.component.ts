@@ -15,11 +15,7 @@ export class AppComponent {
   title = 'afterschool';
   user: User;
 
-<<<<<<< HEAD
   constructor(public authService: AuthService,public dialog: MatDialog) {}
-=======
-  constructor(public authService: AuthService) {}
->>>>>>> eb966cc7b230c18e820c9b23710485b79f726e3a
 
   login() {
     this.authService.firebaseLogin();
@@ -28,7 +24,6 @@ export class AppComponent {
   logout() {
     this.authService.firebaseLogout();
   }
-<<<<<<< HEAD
 
   openPostForm(){
     const dialogRef = this.dialog.open(PostFormComponent);
@@ -38,6 +33,4 @@ export class AppComponent {
   }
   
   
-=======
->>>>>>> eb966cc7b230c18e820c9b23710485b79f726e3a
 }

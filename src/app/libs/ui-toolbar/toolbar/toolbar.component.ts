@@ -1,5 +1,5 @@
 import { AuthService } from './../../../services/auth.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'ui-toolbar',
@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./toolbar.component.scss']
 })
 export class ToolbarComponent implements OnInit {
+  @Output() addPostClicked=new EventEmitter();
   constructor(public authService: AuthService) {}
 
   ngOnInit() {}
@@ -17,5 +18,9 @@ export class ToolbarComponent implements OnInit {
 
   handleLogout() {
     this.authService.firebaseLogout();
+  }
+
+  newPostDialog(){
+    this.addPostClicked.emit();
   }
 }

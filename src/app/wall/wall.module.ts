@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { WallRoutingModule } from './wall-routing.module';
 import { WallComponent } from './wall/wall.component';
 
+
 @NgModule({
   declarations: [WallComponent],
   imports: [

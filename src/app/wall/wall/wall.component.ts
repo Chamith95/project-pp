@@ -12,4 +12,11 @@ export class WallComponent implements OnInit {
   ngOnInit() {
   }
 
+<<<<<<< HEAD
+=======
+  openPostForm(){
+    console.log("Shit");
+  }
+
+>>>>>>> f209966492fda3ae13a1251bfd200bd774018104
 }

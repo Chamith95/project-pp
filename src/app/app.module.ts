@@ -4,31 +4,27 @@ import { MaterialModule } from './libs/material';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> f209966492fda3ae13a1251bfd200bd774018104
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-//firebase
-import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { AngularFireAuthModule } from '@angular/fire/auth';
 
-import { MatInputModule, MatToolbarModule, MatButtonModule, MatCardModule, MatGridTile, MatGridList, MatGridListModule } from '@angular/material';
-import { environment } from '../environments/environment';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-//component
+
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './components/login/login.component';
-import { HeaderComponent } from './components/header/header.component';
-
-// material
-import {MatStepperModule} from '@angular/material/stepper';
-import { FlexLayoutModule } from '@angular/flex-layout';
-import {MatSelectModule} from '@angular/material/select';
-import {MatAutocompleteModule} from '@angular/material/autocomplete';
-import {MatCheckboxModule} from '@angular/material/checkbox';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { WallModule } from './wall/wall.module';
+import { ProfileModule } from './profile/profile.module';
+import { PostFormComponent } from './components/posts/post-form/post-form.component';
 
 @NgModule({
+<<<<<<< HEAD
   declarations: [
     AppComponent,
     LoginComponent,
@@ -48,25 +44,26 @@ import { ProfileModule } from './profile/profile.module';
 @NgModule({
   declarations: [AppComponent],
 >>>>>>> eb966cc7b230c18e820c9b23710485b79f726e3a
+=======
+  declarations: [AppComponent, PostFormComponent],
+>>>>>>> f209966492fda3ae13a1251bfd200bd774018104
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
     AngularFireModule.initializeApp(environment.firebase),
+<<<<<<< HEAD
     AngularFireAuthModule,
     AngularFirestoreModule,
 <<<<<<< HEAD
+=======
+>>>>>>> f209966492fda3ae13a1251bfd200bd774018104
     AngularFireAuthModule,
-    BrowserAnimationsModule,
-    MatInputModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatCardModule,
-    MatGridListModule,
-    MatStepperModule,
+    AngularFirestoreModule,
     FormsModule,
     ReactiveFormsModule,
+<<<<<<< HEAD
     FlexLayoutModule,
     MatSelectModule,
     MatAutocompleteModule,
@@ -74,8 +71,14 @@ import { ProfileModule } from './profile/profile.module';
 =======
     UiToolbarModule
 >>>>>>> eb966cc7b230c18e820c9b23710485b79f726e3a
+=======
+    AngularFireStorageModule,
+    UiToolbarModule
+
+>>>>>>> f209966492fda3ae13a1251bfd200bd774018104
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents:[PostFormComponent],
 })
 export class AppModule {}

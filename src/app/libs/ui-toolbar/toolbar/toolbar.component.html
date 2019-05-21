@@ -5,6 +5,7 @@
     <ng-container
       *ngIf="authService.user$ | async as user; else showLoginButton"
     >
+<<<<<<< HEAD
 
 
     
@@ -17,13 +18,21 @@
         <mat-icon>person</mat-icon>
       </button>
 
+=======
+      <button mat-icon-button [matMenuTriggerFor]="profileMenu">
+        <mat-icon>person</mat-icon>
+      </button>
+>>>>>>> eb966cc7b230c18e820c9b23710485b79f726e3a
       <mat-menu #profileMenu="matMenu">
         <button mat-menu-item>{{ user.displayName }}</button>
         <button mat-menu-item (click)="handleLogout()">Logout</button>
       </mat-menu>
+<<<<<<< HEAD
       <!-- <div *ngIf='{{user}}'> -->
 
     <!-- </div> -->
+=======
+>>>>>>> eb966cc7b230c18e820c9b23710485b79f726e3a
     </ng-container>
     <ng-template #showLoginButton>
       <a mat-stroked-button (click)="handleLogin()">Login</a>
